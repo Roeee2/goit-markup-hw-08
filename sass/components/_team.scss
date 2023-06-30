@@ -1,0 +1,94 @@
+.team-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  background: $button-grey;
+  padding: 0;
+  margin: 0;
+}
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  background: $button-grey;
+  padding: 0px 0 50px 0;
+
+  figure {
+    margin-right: 0px;
+    margin-left: 0px;
+    box-shadow: $team-figure;
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__member-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.187;
+  }
+
+  &__description {
+    color: $text-color;
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    &--icon {
+      fill: $web-studio-grey;
+      transition-property: fill;
+      transition: $standard;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+      position: relative;
+      fill: $web-studio-grey;
+      color: $web-studio-grey;
+      --color1: $web-studio-grey;
+      transition-property: fill, color, background-color;
+      transition: $standard;
+    }
+
+    li:hover,
+    li:focus {
+      background-color: $web-studio-blue;
+      fill: $white;
+      color: $white;
+      --color1: $white;
+      transition-property: fill, color, background-color;
+      transition: $standard;
+    }
+
+    li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

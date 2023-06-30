@@ -1,0 +1,141 @@
+@mixin logo {
+  font-family: $logo-font;
+}
+.header-box {
+  display: flex;
+  align-content: center;
+  margin: 24px 0 0 215px;
+  border: solid 1px $header-border;
+  border-width: 0 0 1px 0;
+
+  &__header-container {
+    display: flex;
+    width: 1600px;
+    height: 80px;
+    margin-inline: auto;
+
+    &--logo-web {
+      color: $web-studio-blue;
+      padding-left: 215px;
+    }
+
+    &--logo-studio {
+      color: $black;
+    }
+
+    &--nav-spacing {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+    }
+
+    h2 {
+      @include logo;
+    }
+    h3 {
+      margin-left: 93px;
+    }
+
+    ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      position: relative;
+    }
+
+    &--nav-item {
+      justify-content: center;
+      color: $black;
+      transition-property: color;
+      transition: $standard;
+    }
+
+    &--nav-item:hover,
+    &--nav-item:focus {
+      color: $web-studio-blue;
+      transition-property: color;
+      transition: $standard;
+    }
+
+    &--nav-item-active {
+      color: $web-studio-blue;
+      transition-property: color;
+      transition: $standard;
+    }
+
+    &--nav-item::after {
+      content: "";
+      justify-content: center;
+      height: 4px;
+      width: 100%;
+      background-color: transparent;
+      display: flex;
+      border-radius: 2px;
+      transform: translateY(32px);
+      transition-property: background-color;
+      transition: $standard;
+    }
+
+    &--nav-item-active::after {
+      content: "";
+      justify-content: center;
+      height: 4px;
+      width: 100%;
+      background-color: $web-studio-blue;
+      display: flex;
+      border-radius: 2px;
+      transform: translateY(32px);
+      transition-property: background-color;
+      transition: $standard;
+    }
+
+    &--nav-item:hover::after,
+    &--nav-item:focus::after {
+      content: "";
+      justify-content: center;
+      height: 4px;
+      width: 100%;
+      background-color: $web-studio-blue;
+      display: flex;
+      border-radius: 2px;
+      transform: translateY(32px);
+      transition-property: background-color;
+      transition: $standard;
+    }
+    &--contact-spacing {
+      display: flex;
+      justify-content: left;
+      padding: 5px 0;
+      margin-left: 225px;
+    }
+    svg {
+      vertical-align: middle;
+      margin: 0 10px 0 30px;
+      fill: $text-color;
+      transition-property: fill;
+      transition: $standard;
+    }
+    a {
+      color: $text-color;
+      transition-property: color;
+      transition: $standard;
+    }
+    a:hover svg,
+    a:focus svg {
+      fill: $web-studio-blue;
+      transition-property: fill;
+      transition: $standard;
+    }
+    a:hover,
+    a:focus {
+      color: $web-studio-blue;
+      transition-property: color;
+      transition: $standard;
+    }
+  }
+}
