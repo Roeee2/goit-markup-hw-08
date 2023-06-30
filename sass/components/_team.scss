@@ -36,60 +36,58 @@
     color: $text-color;
   }
 
-  &__socials {
+  .socials {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-bottom: 30px;
 
-    &--icon {
-      fill: $web-studio-grey;
-      transition-property: fill;
-      transition: $standard;
-    }
-
-    ul {
+    &__bar {
       list-style: none;
       display: flex;
       gap: 10px;
       margin: 0;
       padding: 0;
       align-items: center;
-    }
 
-    li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 44px;
-      width: 44px;
-      border-radius: 50%;
-      position: relative;
-      fill: $web-studio-grey;
-      color: $web-studio-grey;
-      --color1: $web-studio-grey;
-      transition-property: fill, color, background-color;
-      transition: $standard;
-    }
+      &--icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        position: relative;
+        fill: $web-studio-grey;
+        color: $web-studio-grey;
+        --color1: $web-studio-grey;
+        transition-property: fill, color, background-color;
+        transition: $standard;
+      }
 
-    li:hover,
-    li:focus {
-      background-color: $web-studio-blue;
-      fill: $white;
-      color: $white;
-      --color1: $white;
-      transition-property: fill, color, background-color;
-      transition: $standard;
-    }
+      &--icon-container:hover,
+      &--icon-container:focus {
+        background-color: $web-studio-blue;
+        fill: $white;
+        transition-property: fill, background-color;
+        transition: $standard;
+      }
 
-    li a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      &--icon-container a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &--icon {
+        fill: $web-studio-grey;
+        transition-property: fill;
+        transition: $standard;
+      }
     }
   }
 }
