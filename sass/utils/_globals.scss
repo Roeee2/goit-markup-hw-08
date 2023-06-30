@@ -1,3 +1,5 @@
+@use "./vars" as *;
+
 body {
   font-family: $main-font;
   color: $header-color;

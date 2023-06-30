@@ -1,3 +1,5 @@
+@use "./../utils/vars" as *;
+@use "./../utils/mixins" as *;
 @mixin logo {
   font-family: $logo-font;
 }

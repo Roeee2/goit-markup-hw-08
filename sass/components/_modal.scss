@@ -1,3 +1,4 @@
+@use "./../utils/vars" as *;
 .backdrop {
   background-color: $modal-shadow;
   position: fixed;

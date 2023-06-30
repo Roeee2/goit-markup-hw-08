@@ -1,5 +1,6 @@
 @use "./utils/vars" as *;
-@use "./components/global" as *;
+@use "./utils/mixins" as *;
+@use "./utils/globals" as *;
 @use "./components/header" as *;
 @use "./components/solutions" as *;
 @use "./components/whatwedo" as *;
