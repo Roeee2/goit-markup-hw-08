@@ -12,9 +12,17 @@
 
   &__header-container {
     display: flex;
-    width: 1600px;
+    max-width: 480px;
     height: 80px;
     margin-inline: auto;
+
+    @include tablet {
+      max-width: 768px;
+    }
+
+    @include desktop {
+      max-width: 1200px;
+    }
 
     &--logo-web {
       color: $web-studio-blue;

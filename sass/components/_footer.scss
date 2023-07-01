@@ -3,10 +3,18 @@
   background-color: $h1-background;
 }
 .footer-container {
-  width: 1600px;
+  width: 480px;
   margin-inline: auto;
   display: flex;
   flex-direction: row;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
 
   &__logo {
     padding: 60px 0 0 0;
@@ -25,7 +33,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.714;
-    color: var(--white);
+    color: $white;
     padding-left: 215px;
     padding-bottom: 60px;
     letter-spacing: 0.03em;
