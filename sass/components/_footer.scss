@@ -1,19 +1,22 @@
 @use "./../utils/vars" as *;
+@use "./../utils/mixins" as *;
 .footer-bg {
   background-color: $h1-background;
 }
 .footer-container {
-  width: 480px;
+  max-width: 480px;
   margin-inline: auto;
-  display: flex;
+  //display: flex;
   flex-direction: row;
+
+  display: none;
 
   @include tablet {
     max-width: 768px;
   }
 
   @include desktop {
-    max-width: 1200px;
+    max-width: 1600px;
   }
 
   &__logo {

@@ -13,34 +13,53 @@
     <link rel="stylesheet" href="./css/modern-normalize.min.css" />
   </head>
   <body>
-    <header class="header-box">
-      <div class="header-box__header-container">
-        <section>
+    <header class="header-border">
+      <div class="header-container">
+        <div class="mobile-header">
           <a href="https://roeee2.github.io/goit-markup-hw-08/"
             ><h2>
-              <span class="header-box__header-container--logo-web">Web</span
-              ><span class="header-box__header-container--logo-studio">Studio</span>
+              <span class="header-container__logo-web">Web</span
+              ><span class="header-container__logo-studio">Studio</span>
             </h2></a
           >
-        </section>
+
+          <button
+            class="menu-container__burger js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+            <svg width="40px" height="40px">
+              <use
+                class="header-container__burger-icon"
+                href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
         <nav>
-          <section class="header-box__header-container--nav-spacing">
+          <section class="header-container__nav-spacing">
             <h3>
               <ul>
                 <li>
-                  <a class="header-box__header-container--nav-item-active" href="./index.html">Agencja</a>
+                  <a
+                    class="header-container__nav-item-active"
+                    href="./index.html"
+                    >Agencja</a
+                  >
                 </li>
                 <li>
-                  <a class="header-box__header-container--nav-item" href="./portfolio.html">Portfolio</a>
+                  <a class="header-container__nav-item" href="./portfolio.html"
+                    >Portfolio</a
+                  >
                 </li>
                 <li>
-                  <a class="header-box__header-container--nav-item" href="./contact.html">Kontakt</a>
+                  <a class="header-container__nav-item" href="./contact.html"
+                    >Kontakt</a
+                  >
                 </li>
               </ul>
             </h3>
           </section>
         </nav>
-        <section class="header-box__header-container--contact-spacing">
+        <section class="header-container__contact-spacing">
           <h4>
             <a href="mailto:info@devstudio.com">
               <svg class="envelope" width="24px" height="18px">
@@ -70,10 +89,12 @@
               <span>DLA WASZEGO BIZNESU</span>
             </span>
           </h1>
-          <button type="button" class="solutions__content--order" data-modal-open>
+          <button
+            type="button"
+            class="solutions__content--order"
+            data-modal-open>
             Zamów usługę
           </button>
-          </div>
         </div>
       </section>
       <section>
@@ -136,33 +157,33 @@
           <div class="whatwedo__container">
             <div class="whatwedo__item">
               <img
-              src="images/whatwedo1.jpg"
-              width="370"
-              height="294"
-              alt="Close up image of a programer working at his desk." />
-                <div class="whatwedo__item--bar">
+                src="images/whatwedo1.jpg"
+                width="370"
+                height="294"
+                alt="Close up image of a programer working at his desk." />
+              <div class="whatwedo__item--bar">
                 <p class="whatwedo__item--description">Aplikacje komputerowe</p>
-                </div>
+              </div>
             </div>
             <div class="whatwedo__item">
               <img
-              src="images/whatwedo2.jpg"
-              width="370"
-              height="294"
-              alt="Web ui designers are developing application/interface for mobile phones." />
-                <div class="whatwedo__item--bar">
+                src="images/whatwedo2.jpg"
+                width="370"
+                height="294"
+                alt="Web ui designers are developing application/interface for mobile phones." />
+              <div class="whatwedo__item--bar">
                 <p class="whatwedo__item--description">Aplikacje mobilne</p>
-                </div>
+              </div>
             </div>
             <div class="whatwedo__item">
               <img
-              src="images/whatwedo3.jpg"
-              width="370"
-              height="294"
-              alt="Creative artist web design with working colour selection graphic tablet." />
-                <div class="whatwedo__item--bar">
+                src="images/whatwedo3.jpg"
+                width="370"
+                height="294"
+                alt="Creative artist web design with working colour selection graphic tablet." />
+              <div class="whatwedo__item--bar">
                 <p class="whatwedo__item--description">Rozwiązania graficzne</p>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -412,7 +433,10 @@
               </a>
             </li>
             <li>
-              <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://google.com"
+                target="_blank"
+                rel="noopener noreferrer">
                 <svg width="212" height="120">
                   <use href="./images/icons.svg#icon-customer_logo2"></use>
                 </svg>
@@ -480,14 +504,14 @@
             <address>m. Warszawa, Aleje Jerozolimskie 21</address>
             <ul class="footer-container__address--ways-of-contact">
               <li>
-                <span><a href="mailto:info@devstudio.com"
+                <span
+                  ><a href="mailto:info@devstudio.com"
                     >info@devstudio.com</a
                   ></span
                 >
               </li>
               <li>
-                <span><a href="tel:+48111111111">+48 111 111 111</a></span
-                >
+                <span><a href="tel:+48111111111">+48 111 111 111</a></span>
               </li>
             </ul>
           </div>
@@ -537,20 +561,29 @@
             </li>
           </ul>
         </section>
-        <section>         
+        <section>
           <ul class="footer-container__newsletter">
             <li>
-              <h2>Zapisz się do newslettera</h2>  
+              <h2>Zapisz się do newslettera</h2>
             </li>
             <li>
               <form name="signup" autocomplete="on" novalidate>
                 <label>
-                  <input type="email" name="email" class="footer-container__newsletter--newsletter-box" placeholder="E-mail"/>
+                  <input
+                    type="email"
+                    name="email"
+                    class="footer-container__newsletter--newsletter-box"
+                    placeholder="E-mail" />
                 </label>
-                <button type="submit" class="footer-container__newsletter--subscribe">
+                <button
+                  type="submit"
+                  class="footer-container__newsletter--subscribe">
                   Zapisz się
-                  <svg class="footer-container__newsletter--send-icon" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-send"></use>
+                  <svg
+                    class="footer-container__newsletter--send-icon"
+                    width="24px"
+                    height="24px">
+                    <use href="./images/icons.svg#icon-send"></use>
                   </svg>
                 </button>
               </form>
@@ -559,6 +592,71 @@
         </section>
       </div>
     </footer>
+
+    <!-- mobile menu -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-container__burger js-close-menu">
+        <svg width="40px" height="40px">
+          <use href="./images/icons.svg#icon-mobile-close"></use>
+        </svg>
+      </button>
+
+      <ul class="menu-container__nav">
+        <li><a href="" class="menu-container__link">Agencja</a></li>
+        <li><a href="" class="menu-container__link">Portfolio</a></li>
+        <li><a href="" class="menu-container__link">Kontakt</a></li>
+      </ul>
+
+      <div class="menu_container__contact">
+        <p class="menu-container__phone">
+          <a href="tel:+48111111111">+48 111 111 111</a>
+        </p>
+        <p class="menu-container__mail">
+          <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </p>
+        <ul class="menu-container__socials">
+          <li>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram
+            </a>
+          </li>
+          <li class="menu-container__socials--divider">|</li>
+          <li>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitter
+            </a>
+          </li>
+          <li class="menu-container__socials--divider">|</li>
+          <li>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook
+            </a>
+          </li>
+          <li class="menu-container__socials--divider">|</li>
+          <li>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- modal -->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close" data-modal-close>
@@ -573,7 +671,10 @@
             <label>
               <h3 class="contact__label-header">Imię</h3>
               <div class="contact__field">
-                <input type="text" name="contact-name" class="contact__field--box"/>
+                <input
+                  type="text"
+                  name="contact-name"
+                  class="contact__field--box" />
                 <svg width="18px" height="18px">
                   <use href="./images/icons.svg#icon-person-black"></use>
                 </svg>
@@ -582,7 +683,10 @@
             <label>
               <h3 class="contact__label-header">Telefon</h3>
               <div class="contact__field">
-                <input type="text" name="contact-phone" class="contact__field--box" />
+                <input
+                  type="text"
+                  name="contact-phone"
+                  class="contact__field--box" />
                 <svg width="18px" height="18px">
                   <use href="./images/icons.svg#icon-phone-black"></use>
                 </svg>
@@ -591,7 +695,10 @@
             <label>
               <h3 class="contact__label-header">Email</h3>
               <div class="contact__field">
-                <input type="email" name="contact-email" class="contact__field--box" />
+                <input
+                  type="email"
+                  name="contact-email"
+                  class="contact__field--box" />
                 <svg width="18px" height="18px">
                   <use href="./images/icons.svg#icon-email-black"></use>
                 </svg>
@@ -600,28 +707,40 @@
             <label>
               <h3 class="contact__label-header">Komentarz</h3>
               <div class="contact__field">
-                <textarea class="contact__comment" name="comment" rows="5" placeholder="Wprowadź tekst"></textarea>
+                <textarea
+                  class="contact__comment"
+                  name="comment"
+                  rows="5"
+                  placeholder="Wprowadź tekst"></textarea>
               </div>
             </label>
-  
-              <div class="contact__checkbox-container">
-                <input type="checkbox" id="checkbox1" name="contact-checkbox"/>
-                <label for="checkbox1" class="contact__declaration-label">
-                  <div class="contact__empty-box">
-                    <svg width="16px" height="15px" class="contact__checkbox-container--empty">
-                      <use href="./images/icons.svg#icon-checkbox"></use>
-                    </svg>
-                  </div>
-                  <div class="contact__box-checked">
-                    <svg width="16px" height="15px" class="contact__checkbox-container--checked">
-                      <use href="./images/icons.svg#icon-checkbox-blue"></use>
-                    </svg>
-                  </div>
-                  Oświadczam iż akceptuję <a class="contact__declaration-link" href="#">Regulamin</a> i
-                <a class="contact__declaration-link" href="#">Politykę Prywatności.</a>
-                </label>
 
-              </div>
+            <div class="contact__checkbox-container">
+              <input type="checkbox" id="checkbox1" name="contact-checkbox" />
+              <label for="checkbox1" class="contact__declaration-label">
+                <div class="contact__empty-box">
+                  <svg
+                    width="16px"
+                    height="15px"
+                    class="contact__checkbox-container--empty">
+                    <use href="./images/icons.svg#icon-checkbox"></use>
+                  </svg>
+                </div>
+                <div class="contact__box-checked">
+                  <svg
+                    width="16px"
+                    height="15px"
+                    class="contact__checkbox-container--checked">
+                    <use href="./images/icons.svg#icon-checkbox-blue"></use>
+                  </svg>
+                </div>
+                Oświadczam iż akceptuję
+                <a class="contact__declaration-link" href="#">Regulamin</a> i
+                <a class="contact__declaration-link" href="#"
+                  >Politykę Prywatności.</a
+                >
+              </label>
+            </div>
 
             <div class="contact__send-button">
               <button type="submit" class="contact__contact-button">
@@ -630,9 +749,14 @@
             </div>
           </form>
         </div>
-
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 @use "./../utils/vars" as *;
+@use "./../utils/mixins" as *;
 .types-box {
   display: flex;
   gap: 8px;
@@ -56,17 +57,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 480px;
+    max-width: 480px;
     box-sizing: border-box;
     list-style-type: none;
     box-sizing: border-box;
-    
+
     @include tablet {
       max-width: 768px;
     }
 
     @include desktop {
-      max-width: 1200px;
+      max-width: 1600px;
     }
 
     &--overlay {

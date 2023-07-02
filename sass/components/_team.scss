@@ -1,6 +1,6 @@
 @use "./../utils/vars" as *;
 .team-header {
-  display: flex;
+  //display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
@@ -8,9 +8,11 @@
   background: $button-grey;
   padding: 0;
   margin: 0;
+
+  display: none;
 }
 .team-container {
-  display: flex;
+  //display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
@@ -18,6 +20,7 @@
   gap: 30px;
   background: $button-grey;
   padding: 0px 0 50px 0;
+  display: none;
 
   figure {
     margin-right: 0px;
