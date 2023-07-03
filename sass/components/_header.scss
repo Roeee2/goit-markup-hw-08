@@ -17,12 +17,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 480px;
-  height: 80px;
-  padding: 0;
-
-  nav {
-    display: none;
-  }
+  width: 100%;
 
   @include tablet {
     max-width: 768px;
@@ -30,24 +25,37 @@
 
   @include desktop {
     max-width: 1600px;
-    padding: 0 0 0 215px;
+    height: 80px;
   }
+  nav {
+    display: none;
 
+    @include tablet {
+      display: flex;
+      margin-right: auto;
+    }
+
+    @include desktop {
+      display: flex;
+      padding: 0 0 0 93px;
+      margin-right: auto;
+    }
+  }
   &__logo-web {
     color: $web-studio-blue;
     padding-left: 15px;
+
+    @include desktop {
+      padding-left: 225px;
+    }
   }
 
   &__logo-studio {
     color: $black;
   }
 
-  &__burger-icon {
-    fill: $black;
-    transition-property: fill;
-    transition: $standard;
-    background-color: transparent;
-    border: 0;
+  &__mobile-burger {
+    display: block;
 
     @include tablet {
       display: none;
@@ -56,6 +64,13 @@
     @include desktop {
       display: none;
     }
+  }
+  &__burger-icon {
+    fill: $black;
+    transition-property: fill;
+    transition: $standard;
+    background-color: transparent;
+    border: 0;
 
     &:hover,
     &:focus {
@@ -76,7 +91,7 @@
   }
 
   h3 {
-    margin-left: 93px;
+    margin-left: 83px;
   }
 
   ul {
@@ -150,36 +165,60 @@
     transition-property: background-color;
     transition: $standard;
   }
-  &__contact-spacing {
-    display: flex;
-    justify-content: left;
-    padding: 5px 0;
-    margin-left: 225px;
 
+  &__contact-spacing {
     display: none;
-  }
-  svg {
-    vertical-align: middle;
-    margin: 0 10px 0 276px;
-    fill: $text-color;
-    transition-property: fill;
-    transition: $standard;
-  }
-  a {
-    color: $text-color;
-    transition-property: color;
-    transition: $standard;
-  }
-  a:hover svg,
-  a:focus svg {
-    fill: $web-studio-blue;
-    transition-property: fill;
-    transition: $standard;
-  }
-  a:hover,
-  a:focus {
-    color: $web-studio-blue;
-    transition-property: color;
-    transition: $standard;
+    padding: 5px 15px 5px 0;
+
+    @include tablet {
+      padding: 21px 15px 21px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: flex-end;
+    }
+
+    @include desktop {
+      padding: 32px 227px 32px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    &--box {
+      align-items: center;
+    }
+
+    svg {
+      vertical-align: middle;
+      fill: $text-color;
+      transition-property: fill;
+      transition: $standard;
+    }
+
+    a {
+      color: $text-color;
+      transition-property: color;
+      transition: $standard;
+    }
+
+    a:hover svg,
+    a:focus svg {
+      fill: $web-studio-blue;
+      transition-property: fill;
+      transition: $standard;
+    }
+
+    a:hover,
+    a:focus {
+      color: $web-studio-blue;
+      transition-property: color;
+      transition: $standard;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }

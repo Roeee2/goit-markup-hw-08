@@ -1,4 +1,5 @@
 @use "./../utils/vars" as *;
+@use "./../utils/mixins" as *;
 
 .menu-container.is-open {
   transform: translateX(0);
